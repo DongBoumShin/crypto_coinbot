@@ -37,3 +37,7 @@ Press F11 key to close every position and exit.
 For more info, please refer to my crypto_simulator project.
 
 Again, use at your own risk.
+
+PreReqs
+
+Pandas, Numpy, Apscheduler, Psutil, Pynput, Python-Binance(binance)
