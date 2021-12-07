@@ -22,7 +22,7 @@ If you have seen my crypto simulator project, this works very similarly.
 
 In fact, the only 2 differences are that the algorithm no longer manages exits, and that it stores 'hasflags' in a dictionary so no multiple positions are opened for any pair.
 
-Algorithm now returns an integer flag of 0, 1, 2, along with a tuple of values required by the Controller. Example Algorithm is provided.
+Algorithm now returns an integer flag of 0, 1, 2, along with a tuple of values required by the Controller. Example Algorithm is provided with guaranteed horrible returns.
 
 Controller gets the returned required info, sets a stoploss and a target price, and opens the position accordingly.
 
