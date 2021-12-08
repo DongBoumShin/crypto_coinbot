@@ -70,11 +70,11 @@ class ExampleAlg(Algorithm):
         supertrend = meth.supertrend(self.data05)
         if not self.bought[ticker]:
             if supertrend['supertrend'].iat[-1]:
-				if self.curprice > sma22.iat[-1]:
-					self.bought[ticker] = True
-					return 1
+		if self.curprice > sma22.iat[-1]:
+			self.bought[ticker] = True
+			return 1
             elif not supertrend['supertrend'].iat[-1]:
-				if self.curprice < sma22.iat[-1]:
-					self.bought[ticker] = True
-					return 2
+		if self.curprice < sma22.iat[-1]:
+			self.bought[ticker] = True
+			return 2
 
