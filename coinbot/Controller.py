@@ -14,7 +14,10 @@ class Controller(mp.Process):
         self.atr_var = req_info[3]
         self.ticker = ticker
         self.binance_client = binance_client
-        self.amount = 100  # dollars
+		with open("price_data.json", 'r') as file:
+        	price_data=json.load(file)
+        self.amount = price_data['amount'] # dollars
+        self.leverage = price_data['leverage']
         self.coin = round(self.amount/self.avprice, precision)
         self.alive = False
         self.stdate = None

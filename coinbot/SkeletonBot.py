@@ -109,10 +109,12 @@ class ActualBot:
         full_job.add_job(self.autotrade, trigger='cron', minute='0,5,10,15,20,25,30,35,40,45,50,55')
         try:
             full_job.start()
-
-            def on_press(key):
+			
+			def on_press(key):
                 if key == keyboard.Key.f11:
                     return False
+                if key == keyboard.Key.f10:
+                    self.Algorithm.update()
 
             listener = keyboard.Listener(on_press=on_press)
             listener.start()

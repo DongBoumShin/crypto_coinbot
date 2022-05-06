@@ -6,8 +6,12 @@ import important_methods as meth
 
 class Algorithm:
     def __init__(self, tickers):
-        pass
-
+        self.update()
+		
+	def update(self):
+        with open("setting_data.json", 'r') as file:
+            settings=json.load(file)
+		#Feel free to implement ANY variable here, as long as it fits in a json
     def buysell(self, data05, data15, data60, ticker, soldflag):
         raise NotImplementedError('obv')
 
@@ -18,6 +22,7 @@ class Algorithm:
 
 class ExampleAlg(Algorithm):
     def __init__(self, tickers):
+		super().__init__()
         self.bought = {}
         self.hasflag = {}
         for ticker in tickers:
